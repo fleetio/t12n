@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     t12n (0.1.0)
+      zeitwerk (~> 2.4)
 
 GEM
   remote: https://rubygems.org/
@@ -21,6 +22,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   x86_64-darwin-19

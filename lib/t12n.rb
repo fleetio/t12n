@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "t12n/version"
+require "zeitwerk"
+
+loader = Zeitwerk::Loader.for_gem
+loader.setup
 
 module T12n
   class Error < StandardError; end
