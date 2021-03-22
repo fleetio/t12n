@@ -8,6 +8,7 @@ module T12n
 
     def save(schema)
       schema_by_name[schema.name] = schema
+      :ok
     end
 
     def fetch(name)

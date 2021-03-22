@@ -15,7 +15,8 @@ module T12n
 
   extend self
 
-  def start
-    Interface.new(SchemaStore.new)
+  def start(schema_store: nil)
+    schema_store ||= SchemaStore.new
+    Interface.new(schema_store)
   end
 end
