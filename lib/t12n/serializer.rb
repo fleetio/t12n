@@ -4,7 +4,14 @@ module T12n
   class Serializer
     class << self
       def from_proc(prc)
-        prc
+        case prc.arity
+        when 0
+          ->(_object) { prc.() }
+        when 1, -1
+          ->(object) { prc.(object) }
+        else
+          raise T12n::ArgumentError, "Unexpected proc arity: #{prc.arity}"
+        end
       end
     end
   end
