@@ -37,7 +37,8 @@ module T12n
 
       with_context do |context|
         schema = t12n.fetch_schema(schema_name, context)
-        assoc_attrs = schema.attrs.select { |attr| attr_name_set.include?(attr.name) } if attr_name_set
+        assoc_attrs = schema.attrs
+        assoc_attrs = assoc_attrs.select { |attr| attr_name_set.include?(attr.name) } if attr_name_set
 
         assoc_attrs.each do |assoc_attr|
           define_attr("#{schema_name}.#{assoc_attr.name}") do |object|
