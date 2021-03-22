@@ -2,12 +2,14 @@ PATH
   remote: .
   specs:
     t12n (0.1.0)
+      ivo (~> 0.5)
       zeitwerk (~> 2.4)
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.4.4)
+    ivo (0.5.0)
     rake (13.0.3)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
