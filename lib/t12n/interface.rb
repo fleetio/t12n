@@ -3,9 +3,19 @@
 module T12n
   Interface = Ivo.new(:schema_store) do
     def define_schema(name, &block)
+      raise ArgumentError, "No block given" unless block
+
+      raise ArgumentError, "Unexpected proc arity: #{block.arity}" if block.arity > 1
+
       builder = SchemaBuilder.new(self)
-      builder.instance_exec(&block)
-      schema = Schema.new(name.to_s, builder.schema_attrs, builder.context_blocks)
+
+      if block.arity == 1
+        block.call(builder)
+      else
+        builder.instance_exec(&block)
+      end
+
+      schema = Schema.new(name, builder.schema_attrs, builder.context_blocks)
       schema_store.save(schema)
       :ok
     end
