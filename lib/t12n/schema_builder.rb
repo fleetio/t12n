@@ -20,6 +20,8 @@ module T12n
     end
 
     def define_attr(name, &block)
+      raise ArgumentError, "No block given" unless block
+
       schema_attrs << Attr.new(name.to_s, Serializer.from_proc(block))
       :ok
     end
