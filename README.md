@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-See specs for usage.
+See [spec/examples](spec/examples). The examples run as tests to ensure accuracy.
 
 ## Development
 
