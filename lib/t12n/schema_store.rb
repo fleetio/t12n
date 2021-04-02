@@ -12,7 +12,7 @@ module T12n
     end
 
     def fetch(name)
-      schema_by_name[name.to_s]
+      schema_by_name[name]
     end
 
     private
