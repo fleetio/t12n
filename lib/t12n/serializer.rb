@@ -7,7 +7,7 @@ module T12n
         case prc.arity
         when 0
           ->(_object) { prc.() }
-        when 1, -1
+        when 1, -1, -2
           ->(object) { prc.(object) }
         else
           raise T12n::ArgumentError, "Unexpected proc arity: #{prc.arity}"
