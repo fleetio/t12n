@@ -36,8 +36,12 @@ RSpec.describe "examples" do
     t12n.define_schema :user do
       attrs :id
 
+      # define_attr :name do |user|
+      #   "#{user.first_name} #{user.last_name}"
+      # end
+
       define_attr :name do |user|
-        "#{user.first_name} #{user.last_name}"
+        "#{user[:first_name]} #{user[;last_name}"
       end
 
       associated_attrs :company, [:name, :location, :year] do |user|
