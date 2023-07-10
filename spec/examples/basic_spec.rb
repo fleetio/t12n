@@ -3,10 +3,11 @@
 RSpec.describe "examples" do
   it "basic" do
     t12n = T12n.start
+    user_schema = Data.define(:id, :name)
 
     users = [
-      Ivo.(id: 1, name: "John"),
-      Ivo.(id: 2, name: "Jan"),
+      user_schema.new(id: 1, name: "John"),
+      user_schema.new(id: 2, name: "Jan"),
     ]
 
     t12n.define_schema :user do

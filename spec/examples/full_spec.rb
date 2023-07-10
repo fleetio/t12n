@@ -3,14 +3,16 @@
 RSpec.describe "examples" do
   it "full" do
     t12n = T12n.start
+    company_schema = Data.define(:id, :name, :city, :state, :year)
+    user_schema = Data.define(:id, :first_name, :last_name, :email, :work_company)
 
     users = [
-      Ivo.(
+      user_schema.new(
         id: 1,
         first_name: "John",
         last_name: "Smith",
         email: "js@example.com",
-        work_company: Ivo.(
+        work_company: company_schema.new(
           id: 10,
           name: "Productco",
           city: "Boston",
@@ -18,12 +20,12 @@ RSpec.describe "examples" do
           year: 1950,
         ),
       ),
-      Ivo.(
+      user_schema.new(
         id: 2,
         first_name: "Jane",
         last_name: "Doe",
         email: "jd@example.com",
-        work_company: Ivo.(
+        work_company: company_schema.new(
           id: 20,
           name: "Serviceco",
           city: "Atlanta",

@@ -12,12 +12,12 @@ Gem::Specification.new do |spec|
   # spec.description   = "TODO: Write a longer description or delete this line."
   spec.homepage      = "https://github.com/austinthecoder/t12n"
   spec.license       = "MIT"
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
+  spec.required_ruby_version = Gem::Requirement.new(">= 3.2.0")
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/austinthecoder/t12n"
+  spec.metadata["source_code_uri"] = "https://github.com/fleetio/t12n"
   # spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
 
   # Specify which files should be added to the gem when it is released.
@@ -31,7 +31,6 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "zeitwerk", "~> 2.4"
-  spec.add_dependency "ivo", "~> 0.5"
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html

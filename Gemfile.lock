@@ -1,15 +1,13 @@
 PATH
   remote: .
   specs:
-    t12n (0.2.2)
-      ivo (~> 0.5)
+    t12n (0.4.0)
       zeitwerk (~> 2.4)
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.4.4)
-    ivo (0.5.0)
     rake (13.0.3)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
@@ -24,12 +22,10 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
-    zeitwerk (2.4.2)
+    zeitwerk (2.6.8)
 
 PLATFORMS
-  x86_64-darwin-19
-  x86_64-darwin-20
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
   rake (~> 13.0)
