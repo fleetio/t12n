@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module T12n
-  Interface = Ivo.new(:schema_store) do
+  Interface = Data.define(:schema_store) do
     def define_schema(name, &block)
       raise ArgumentError, "No block given" unless block
 
